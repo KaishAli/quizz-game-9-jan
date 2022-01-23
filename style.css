@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+     background-image: url(https://images.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg?cs=srgb&dl=pexels-pixabay-50711.jpg&fm=jpg);
+    color: #0ef202;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 1.5s;
+  }
+  
+  
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main';
+    position: relative;
+    height: 50vh;
+  }
+  
+  header,
+  main,
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header,
+  footer {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    background-color: #8c00ff;
+  }
+  
+  header {
+    grid-area: header;
+  }
+  
+  main {
+    grid-area: main;
+    margin-top: 20px;
+    margin-bottom: 140px;
+  }
+    
+  .hide {
+    display: none !important;
+  }
+  
+  /* SCORE Container */
+  #quizz-container,
+  #score-container {
+    color: #222222;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #000000;
+    box-shadow: 7px 10px 0px rgba(211, 151, 151, 0.1);
+  }
+  
+  #quizz-container,
+  #score-container {
+    width: 1000px;
+    max-width: 200%;
+  }
+  
+  #score-container p {
+    margin: 20px 0;
+  }
+  
+  #score-container #display-score {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #correct-answers {
+    font-weight: bold;
+    color: #00ff88;
+  }
+  
+  #questions-qty {
+    font-weight: bold;
+    color: #6800c9;
+  }
+  
+  #restart {
+    background-color: #4600c9;
+    color: rgb(242, 167, 167);
+    font-weight: bold;
+    height: 50px;
+    border: 1px solid #181313;
+    width: 180px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #restart:hover {
+    background-color: #2a272a;
+    color: #ffffff;
+  }
+  
+  /* Quizz Container */
+  #question {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  #answers-box button {
+    display: flex;
+    align-items: stretch;
+    margin: 15px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    color: #ff0000;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #answers-box button:hover {
+    background-color: #2a272a;
+    color: rgb(31, 201, 96);
+  }
+  
+  #answers-box .btn-letter {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #2a272a;
+    border: none;
+    color: rgb(20, 67, 155);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0;
+    padding: 5px;
+    max-width: 45px;
+  }
+  
+  .question-answer {
+    flex: 1 1 0;
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+  #quizz-container .wrong-answer,
+  #quizz-container .wrong-answer .btn-letter {
+    background-color: #e62210;
+    color: rgb(160, 77, 77);
+    border: none;
+  }
+  
+  #quizz-container .correct-answer,
+  #quizz-container .correct-answer .btn-letter {
+    background-color: #2eb94c;
+    color: rgb(199, 180, 180);
+    border: none;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 450px) {
+    #quizz-container,
+    #score-container {
+      border: none;
+      width: 100%;
+      box-shadow: none;
+    }
+  }
